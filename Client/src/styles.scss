@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+
+$screen-xs: 767px; // Define the value of screen-xs variable
+
+.my-h5 {
+  font-size: 24px; // default font size for desktop
+}
+
+// Media query for mobile devices using the correct variable syntax
+@media (max-width: $screen-xs) {
+  .my-h5 {
+    font-size: 16px; // smaller font size for mobile
+  }
+}

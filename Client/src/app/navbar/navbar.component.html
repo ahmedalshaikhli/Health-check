@@ -1,33 +1,69 @@
-<nav class="navbar navbar-expand-xxl navbar-dark bg-primary" aria-label="Seventh navbar example">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">MITIGRATION-RESK-DEMO</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleXxl" aria-controls="navbarsExampleXxl" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <div class="collapse navbar-collapse" id="navbarsExampleXxl">
-        <ul class="navbar-nav me-auto mb-2 mb-xl-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-<!--           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdownXxl" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownXxl">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li> -->
-        </ul>
-<!--         <form>
-          <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-        </form> -->
-      </div>
+<!-- 
+<nav class="navbar navbar-expand navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav d-flex ml-auto">
+        <li class="nav-item profile-photo">
+          <img src="../../assets/img/User_Placeholder.png" alt="Profile Photo" class="rounded-circle">
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " routerLink="/home" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link "   routerLink="/riskProfile" routerLinkActive="active">Risk Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link "  href="#">risk</a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>  -->
+  <nav class="navbar navbar-expand navbar-light">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item profile-photo">
+          <img src="../../assets/img/User_Placeholder.png" alt="Profile Photo" class="rounded-circle">
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/riskProfile" routerLinkActive="active">Risk Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">User profile</a>
+        </li>
+      </ul>
+    </div>
+    <a class="navbar-brand ms-auto" href="#">
+      <img src="../../assets/img/Acc_Logo.png" alt="Logo Image" class="logo-img">
+    </a>
+  </div>
+</nav>  
+
+
+<nav class="navbar fixed-bottom navbar-light">
+  <div class="container justify-content-center">
+    <ul class="list-group list-group-horizontal" >
+      <li class="list-group-item " style="border: none;">
+        <a routerLink="/home" routerLinkActive="active" class="custom-link">
+        <i class="fas fa-home fa-lg circle-icon me-2"></i> Home
+      </a>
+      </li>
+      <li class="list-group-item" style="border: none;">
+        <a routerLink="/home" routerLinkActive="active" class="custom-link">
+          <i class="fas fa-bell fa-lg circle-icon me-2"></i> Notification
+        </a>
+      </li>
+      
+      <li class="list-group-item" style="border: none;">
+        <a routerLink="/riskProfile" routerLinkActive="active" class="custom-link">
+          <i class="fas fa-heartbeat fa-lg circle-icon me-2"></i> Risk Profile
+        </a>
+      </li>
+  </ul>
+  </div>
+</nav>

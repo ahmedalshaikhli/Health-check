@@ -6,15 +6,27 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
-import { DisplayDetailsComponent } from './home/display-details/display-details.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './user-profile/login/login.component';
+import { RegisterComponent } from './user-profile/register/register.component';
+import { RiskProfileComponent } from './risk-profile/risk-profile.component';
+import { HomeAreaCodeComponent } from './home/home-area-code/home-area-code.component';
+import { WorkAreaCodeComponent } from './home/work-area-code/work-area-code.component';
+import { HomeAreaDetailsComponent } from './home/home-area-code/home-area-details/home-area-details.component';
+import { WorkAreaDetailsComponent } from './home/work-area-code/work-area-details/work-area-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    DisplayDetailsComponent
+    LoginComponent,
+    RegisterComponent,
+    RiskProfileComponent,
+    HomeAreaCodeComponent,
+    WorkAreaCodeComponent,
+    HomeAreaDetailsComponent,
+    WorkAreaDetailsComponent
   ],
   imports: [
     BrowserModule,

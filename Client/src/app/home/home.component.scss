@@ -1,19 +1,28 @@
-.bg-red {
+/* .bg-red {
     text-align: center;
     font-size: large;
-  }
+  } */
 
-  .btn-primary {
-    background-color: #6f42c1 !important;
-    border-color: black;
+  @media (max-width: 767px) {
+    .bg-red {
+      background-color: #931cf5;
+      font-size: small;
     }
-    .form-horizontals{
-      display:block;
-      width:50%;
-      margin:0 auto;
+  } 
+
+  .alert.alert-danger {
+    background-color: #931cf5;
+    color: #fff; /* Set the text color to white for contrast */
+  }
+  .alert.alert-danger a.alert-link {
+    color: #fff; /* Set the link color to white for contrast */
   }
 
+  .alert-danger {
 
-  .bg-red2 {
-    background-color: #6f42c1 !important;
-  }
+    border-color: #931cf5;
+}
+
+.fa-lg {
+  font-size: 1.5em; /* Change the value to adjust the size */
+}

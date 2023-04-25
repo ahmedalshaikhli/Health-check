@@ -1,57 +1,30 @@
-<div class="container px-5 my-5">
-    <form class='form-horizontals' (submit)="onFormSubmit()">
-        <div class="mb-3 ">
-            <label class="form-label" for="age">Age</label>
-            <input name="patientAge" [(ngModel)]="patientAge" class="form-control"  type="text" placeholder=""  />
-        </div>
-<!--         <div class="mb-3 ">
-            <label class="form-label" for="sex">Sex</label>
-            <input name="patientSex" [(ngModel)]="patientSex" class="form-control"  type="text" placeholder="" />
-
-        </div> -->
-        <div class="mb-3">
-            <label class="form-label">Sex</label>
-            <div class="form-check">
-              <input name="patientSex" [(ngModel)]="patientSex" class="form-check-input" type="radio" id="male" value="Male">
-              <label class="form-check-label" for="male">Male</label>
-            </div>
-            <div class="form-check">
-              <input name="patientSex" [(ngModel)]="patientSex" class="form-check-input" type="radio" id="female" value="Female">
-              <label class="form-check-label" for="female">Female</label>
-            </div>
-          </div>
-     <div class="mb-3 ">
-            <label class="form-label" for="homeAreaCode">Home Area code</label>
-            <input name="homeCode" [(ngModel)]="homeCode" class="form-control" id="homeAreaCode" type="text" placeholder=""  />
-        
-        </div>
-        <div class="mb-3 ">
-            <label class="form-label" for="workAreaCode">Work Area code </label>
-            <input name="areaCode" [(ngModel)]="areaCode" class="form-control" id="workAreaCode" type="text" placeholder=""  />
-
-        </div> 
-        <div class="d-grid ">
-            <button class="btn btn-primary btn-lg " id="submitButton" type="submit">Submit</button>
-        </div>
-    </form>
-  </div>
-  <!-- <app-display-details [switchCaseResult]="switchCaseResult"></app-display-details> -->
-
-  
-
-
-  <div class="container px-5 my-5" *ngFor="let recommendation of recommendations">
-    <!-- <div>{{ recommendation.id }}</div> -->
-    <div [ngClass]="{'bg-red': recommendation.risk_Level_Target_Area_Code === 'L' || recommendation.risk_Level_Target_Area_Code === 'XL'}">
-      Risk Level: {{ recommendation.risk_Level_Target_Area_Code }}
-    </div>
-    <div>{{ recommendation.recommendations }}</div>
-  </div>
-
-  <!-- <div class="container px-5 my-5" *ngFor="let recommendation of recommendations">
-    <div [ngClass]="{'bg-red': recommendation.riskLevel === 'L' || recommendation.riskLevel === 'XL'}">
-        {{ recommendation.id }}
-    </div>
-    <div>{{ recommendation.riskLevel }}</div>
-    <div>{{ recommendation.recommendations }}</div>
+<!-- <div class="alert alert-primary" role="alert">
+  This is a primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+</div>
+<div class="alert alert-secondary" role="alert">
+  This is a secondary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+</div>
+<div class="alert alert-success" role="alert">
+  This is a success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
 </div> -->
+
+<div class="container">
+  <div class="alert alert-danger mt-3 my-h5 " role="alert">
+    <i class="fas fa-exclamation-circle fa-lg  me-2"></i>Alert! Area Code ABCD near you is at high-risk today. Avoid if you are able.
+  </div>
+</div>
+
+<!-- <div class="alert alert-warning" role="alert">
+  This is a warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+</div>
+<div class="alert alert-info" role="alert">
+  This is a info alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+</div>
+<div class="alert alert-light" role="alert">
+  This is a light alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+</div>
+<div class="alert alert-dark" role="alert">
+  This is a dark alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+</div> -->
+<app-home-area-code></app-home-area-code>
+<app-work-area-code></app-work-area-code>

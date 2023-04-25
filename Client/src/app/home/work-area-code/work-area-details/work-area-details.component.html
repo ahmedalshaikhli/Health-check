@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+      <div class="col-8">
+          <h3 class="text-w my-h5 pt-2">Work Area Code XYZ</h3>
+      </div>
+      <div class="col-4">
+           <a style="cursor: pointer;" (click)="goBack()" class=" float-end mt-2">Back</a>  
+       <!--  <button class=" float-end mt-2" (click)="goBack()">Back</button>  -->
+      </div>
+  </div>
+  <div class="card bg-general text-sm">
+      <div class="card-body text-light">
+        <h5 class="card-title my-h5"><i class="fas fa-home fa-lg circle-icon me-2"></i> Your home area today is at medium risk</h5>
+        <h5 class="card-title ms-2 my-h5 ms-5">When in Area code XYZ, we advise the following:</h5>
+        <ul class=" my-h5" style="list-style-type: disc;">
+          <li class="ms-5">Wear an FFP2 mask when outdoors</li>
+          <li class="ms-5">Turn on your humidifier when at home</li>
+          <li class="ms-5">Carpool or take public transport to avoid further contribution to asthma-triggering pollutants</li>
+        </ul>
+    </div>
+</div>
+
+<div class="container mt-3">
+  <div class="row align-items-center h-100">
+    <div class="col-6 ">
+      <span class="float-end my-h5 "> Risk level: <span class="fw-bold">Low</span></span>
+    </div>
+    <div class="col-6">
+      <canvas  width="120" height="120" id="mydoughnutChart"></canvas>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--  <div id="myChartdoughnutDiv">
+  <canvas id="myChartdoughnut" width="400" height="400"></canvas>>
+</div> -->
+ <div class="container mt-4">
+  <canvas width="600" height="250" id="myChart"></canvas>
+</div> 
+</div>
+
+
+
