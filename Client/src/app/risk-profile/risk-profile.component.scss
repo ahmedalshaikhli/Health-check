@@ -1,12 +1,9 @@
-.bg-red {
-    text-align: center;
-    font-size: large;
-  }
 
   .btn-primary {
     background-color: #6f42c1 !important;
-    border-color: black;
+    border-color: #6f42c1 !important;
     }
+
     .form-horizontals{
       display:block;
       width:50%;
@@ -14,6 +11,11 @@
   }
 
 
-  .bg-red2 {
-    background-color: #6f42c1 !important;
+  @media (max-width: 768px) {
+    /* Custom text size for screens smaller than 768px */
+    .form-horizontals{
+      display:block;
+      width:100%;
+      margin:0 auto;
   }
+    }
