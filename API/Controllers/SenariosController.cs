@@ -88,9 +88,9 @@ public async Task<IActionResult> GetRecommendations(string patientAge, string pa
 }
  */
 
- [HttpGet("recommendations/{patientAge}/{patientSex}/{homeCode}/{areaCode}")]
+ [HttpGet("senario/{patientAge}/{patientSex}/{homeCode}/{areaCode}")]
 
-public async Task<IActionResult> GetRecommendations(string patientAge, string patientSex, string homeCode, string areaCode)
+public async Task<IActionResult> GetSenario(string patientAge, string patientSex, string homeCode, string areaCode)
 {
     try
     {

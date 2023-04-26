@@ -40,13 +40,7 @@
   
 
 
-  <div class="container px-5 my-5" *ngFor="let recommendation of recommendations">
-    <!-- <div>{{ recommendation.id }}</div> -->
-    <div [ngClass]="{'bg-red': recommendation.risk_Level_Target_Area_Code === 'L' || recommendation.risk_Level_Target_Area_Code === 'XL'}">
-      Risk Level: {{ recommendation.risk_Level_Target_Area_Code }}
-    </div>
-    <div>{{ recommendation.recommendations }}</div>
-  </div>
+<!--  -->
 
   <!-- <div class="container px-5 my-5" *ngFor="let recommendation of recommendations">
     <div [ngClass]="{'bg-red': recommendation.riskLevel === 'L' || recommendation.riskLevel === 'XL'}">

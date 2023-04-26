@@ -8,13 +8,22 @@ import { Chart, registerables } from 'chart.js';
   styleUrls: ['./home-area-details.component.scss']
 })
 export class HomeAreaDetailsComponent implements OnInit {
+  patientAge?: string;
+  patientSex?: string;
+  homeCode?: string;
+  areaCode?: string;
+  senario?: any[] = [];
+ 
   constructor( private location: Location) {
     Chart.register(...registerables);
   }
 
 
   ngOnInit(){
-    /* var ctx = document.getElementById('myChart') as HTMLCanvasElement; */
+ 
+    
+      // Fetch saved form submit values from localStorage
+
     var myChart = new Chart("myChart", {
       type: 'line',
       data: {
@@ -68,7 +77,7 @@ export class HomeAreaDetailsComponent implements OnInit {
         labels: ['Red', 'Blue'],
         datasets: [{
           label: 'CO',
-          data: [12, 19],
+          data: [2, 8],
           backgroundColor:[
             'rgb(168, 90, 166)',
             'rgb(213, 177, 250)'
@@ -105,8 +114,25 @@ export class HomeAreaDetailsComponent implements OnInit {
         }
       }
     });
+
+    this.getHomeCode();
 }
 
+getHomeCode(){
+  const formSubmitValuesString = localStorage.getItem('formSubmitValues');
+  if (formSubmitValuesString !== null) {
+    const formSubmitValues = JSON.parse(formSubmitValuesString);
+    // Use the saved values to fetch data or update component properties as needed
+    const { patientAge, patientSex, homeCode, areaCode, senario} = formSubmitValues;
+    // Assign the retrieved values to component properties
+    this.patientAge = patientAge;
+    this.patientSex = patientSex;
+    this.homeCode = homeCode;
+    this.areaCode = areaCode;
+    this.senario = senario;
+  }
+
+}
   goBack(): void {
     // Use the location service to navigate back to the previous location
     this.location.back();

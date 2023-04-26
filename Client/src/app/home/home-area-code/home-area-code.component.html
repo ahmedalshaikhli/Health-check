@@ -1,9 +1,19 @@
 
+<div class="container" *ngFor="let item of senario">
+  <div *ngIf="item.risk_Level_Target_Area_Code === 'L' || item.risk_Level_Target_Area_Code === 'XXL'; else infoAlert" class="alert alert-danger mt-3 my-h5" role="alert">
+    <i class="fas fa-exclamation-circle fa-lg me-2"></i>Alert! Area Code {{ homeCode }} near you is at {{ item.risk_Level_Target_Area_Code }} today. Avoid if you are able.
+  </div>
+  <ng-template #infoAlert>
+    <div class="alert alert-info mt-3 my-h5" role="alert">
+      <i class="fas fa-info-circle fa-lg me-2"></i>Info! Area Code {{ homeCode }} near you is at {{ item.risk_Level_Target_Area_Code }} today.
+    </div>
+  </ng-template>
+</div>
 
-<div class="container">
+<div class="container " *ngFor="let item of senario">
     <div class="row">
         <div class="col-8">
-            <h3 class="text-w my-h5">Home Area Code XYZ</h3>
+            <h3 class="text-w my-h5">Home Area Code {{ homeCode }}</h3>
         </div>
         <div class="col-4">
             <a  routerLink="/home/homeDetails" routerLinkActive="active" class="card-link float-end">View more</a>
@@ -11,13 +21,31 @@
     </div>
  <div class="card bg-general text-sm">
   <div class="card-body text-light">
-    <h5 class="card-title my-h5"><i class="fas fa-home fa-lg circle-icon me-2"></i> Your home area today is at medium risk</h5>
-    <h5 class="card-title ms-2 my-h5 ms-5">When in Area code XYZ, we advise the following:</h5>
-    <ul class=" my-h5" style="list-style-type: disc;">
-      <li class="ms-5">Wear an FFP2 mask when outdoors</li>
-      <li class="ms-5">Turn on your humidifier when at home</li>
-      <li class="ms-5">Carpool or take public transport to avoid further contribution to asthma-triggering pollutants</li>
+    <h5 class="card-title my-h5"><i class="fas fa-home fa-lg circle-icon me-2"></i> Your home area today is at {{ item.risk_Level_Target_Area_Code }} risk</h5>
+    <h5 class="card-title ms-2 my-h5 ms-5">When in Area code {{ homeCode }}, we advise the following:</h5>
+    <ul class=" my-h5" style="list-style-type: disc;" >
+      <li>{{ item.recommendations }}</li>
     </ul>
   </div>
 </div>
 </div>
+<!-- <div class="container">
+  <div>
+    <h2>Form Submit Values</h2>
+    <p>Patient Age: {{ patientAge }}</p>
+    <p>Patient Sex: {{ patientSex }}</p>
+    <p>Home Code: {{ homeCode }}</p>
+    <p>Area Code: {{ areaCode }}</p>
+  
+
+  </div>
+  <div>
+    
+    <ul *ngFor="let item of senario">
+      <li>{{ item.id }}</li>
+      <li>{{ item.risk_Level_Target_Area_Code }}</li>
+      <li>{{ item.recommendations }}</li>
+    </ul>
+  </div>
+
+</div> -->
